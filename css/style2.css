@@ -1,0 +1,417 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
+
+.centerbar2::-webkit-scrollbar {
+  width: 7px;
+  height: auto;
+  background: rgba(28, 28, 28, 0.212);
+  -webkit-transition: .3s;
+  transition: .3s;
+}
+
+::-webkit-scrollbar {
+  width: 2px;
+  height: auto;
+}
+
+.centerbar2::-webkit-scrollbar-thumb {
+  border-radius: 5px;
+  background: hsl(0, 0%, 0%);
+}
+
+::selection {
+  background: var(--accent-color);
+}
+
+.uploudfile2 {
+    position: fixed;
+    width: 350px;
+    height: 500px;
+    background-color: rgba(202, 202, 202, 0);
+    right: 0px;
+    top: 50%;
+    transform: translateY(-50%);
+    border-radius: 0px 10px 10px 0px;
+}
+
+.uppbar2 {
+    position: fixed;
+    right: 0px;
+    width: 100%;
+    height: 10%;
+    display: flex;
+    align-items: center;
+    background-color: #ffffff00;
+    border-radius: 10px 10px 0px 0px;
+}
+
+.numbers-file2 {
+    position: absolute;
+    width: auto;
+    height: 21px;
+    display: flex;
+    align-items: center;
+    left: 20px;
+    color: #080808;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 800;
+    font-size: 20px;
+}
+
+.size-files2 {
+    position: absolute;
+    width: auto;
+    height: 38px;
+    display: flex;
+    align-items: center;
+    left: 50%;
+    transform: translateX(-50%);
+    color: #08080877;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 800;
+    font-size: 14px;
+}
+
+.lowerbar2 {
+    position: fixed;
+    top: 90%;
+    right: 0px;
+    width: 100%;
+    height: 10%;
+    background-color: #ffffff00;
+    border-radius: 0px 0px 10px 10px;
+}
+
+.lowerbar2 button {
+    position: fixed;
+    margin-top: 2.5%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 150px;
+    height: 7%;
+    border-radius: 10px;
+    border: 0px;
+    background-color: #080808;
+    color: #fff;
+    font-family: 'Roboto', sans-serif;
+    cursor: pointer;
+}
+
+.lowerbar2 button:hover {
+    background-color: #080808e3;
+}
+
+.centerbar2 {
+  position: absolute;
+  top: 10%;
+  right: 0;
+  width: 100%;
+  height: 80%;
+  background-color: rgba(127, 255, 212, 0);
+  display: flex;
+  flex-direction: column; /* Убедитесь, что элементы идут в колонну */
+  overflow-y: scroll; /* Позволяет прокручивать, если содержимое выходит за пределы */
+}
+  
+.cell {
+    width: 100%;
+    max-height: 70px;
+    background-color: rgba(255, 0, 0, 0);
+    margin-bottom: 8px;
+  }
+
+
+.copy2 {
+  position: fixed;
+  top: 90%;
+  right: 0px;
+  width: 100%;
+  height: 10%;
+  background-color: #ff000000;
+  border-radius: 0px 0px 10px 10px;
+}
+
+.copy2 button {
+  position: fixed;
+  top: 90%;
+  right: 15px;
+  width: 30px;
+  height: 30px;
+  border-radius: 15% 15% 15% 15%;
+  border: 0px;
+  font-family: 'Roboto', sans-serif;
+  cursor: pointer;
+  transition: all 0.1s linear;
+  background: none;
+}  
+
+.copy2 button img {
+  position: absolute;
+  width: 22px;
+  height: auto;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+}
+
+
+:root {
+  --primary: black;
+  --dark: #000;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.inp {
+  position: relative;
+  width: 90%; /* Оставляем 100%, чтобы элемент растягивался на всю ширину родителя */
+  max-width: 200px; /* Изменено с 280px на 200px */
+  border-radius: 3px;
+  left: 25px;
+  overflow: hidden;
+}
+
+.inp .label {
+  position: absolute;
+  top: -5px;
+  left: 4px;
+  font-size: 15px;
+  color: rgb(0, 0, 0);
+  font-family: 'Roboto', sans-serif;
+  font-weight: 500;
+  transform-origin: 0 0;
+  transform: translate3d(0, 0, 0);
+  transition: all 0.2s ease;
+  pointer-events: none;
+}
+
+.inp .focus-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 90%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0);
+  z-index: -1;
+  transform: scaleX(0);
+  transform-origin: left;
+}
+
+.inp input {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 75%;
+  border: 0;
+  font-family: inherit;
+  height: 40px;
+  font-size: 13px;
+  font-weight: 400;
+  background: none; /* Прозрачный фон */
+  box-shadow: inset 0 -1px 0 rgba(0, 0, 0, 0);
+  color: var(--dark);
+  transition: all 0.15s ease;
+  font-family: 'Roboto', sans-serif;
+}
+
+.inp input:hover {
+  background: transparent;
+  box-shadow: inset 0 -1px 0 rgba(0, 0, 0, 0);
+}
+
+.inp input:not(:placeholder-shown) + .label {
+  color: rgba(0, 0, 0, 0.5);
+  transform: translate3d(0, -12px, 0) scale(0.75);
+}
+
+.inp input:focus {
+  background: transparent;
+  outline: none;
+  box-shadow: inset 0 -2px 0 var(--primary);
+}
+
+.inp input:focus + .label {
+  color: var(--primary);
+  transform: translate3d(0, -12px, 0) scale(0.75);
+}
+
+.inp input:focus + .label + .focus-bg {
+  transform: scaleX(1);
+  transition: all 0.1s ease;
+}
+
+.cell {
+  position: fixed;
+  width: 350px;
+  min-height: 70px;
+  background-color: rgba(255, 0, 0, 0);
+  margin-bottom: 8px;
+  left: 0px;
+}
+
+.cell .img img {
+  position: fixed;
+  left: 12px;
+  margin-top: 10px;
+  width: 40px;
+  height: auto;
+}
+
+.cell .download img {
+  position: fixed;
+  right: 8px;
+  margin-top: 15px;
+  width: 35px;
+  height: auto;
+}
+
+.cell .name {
+  position: fixed;
+  width: 300px;
+  height: auto;
+  margin-top: 10px;
+  left: 70px;
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  font-weight: 900;
+  white-space: nowrap; /* Текст не переносится */
+  overflow: hidden; /* Обрезаем всё за пределами блока */
+  text-overflow: ellipsis; /* Добавляем многоточие */
+  background-color: rgba(0, 255, 255, 0);
+}
+
+.cell .gb {
+  position: fixed;
+  height: auto;
+  margin-top: 35px;
+  left: 70px;
+  font-family: 'Roboto', sans-serif;
+  font-size: 14px;
+  font-weight: 900;
+  color: #08080877;
+  background-color: rgba(0, 255, 255, 0);
+}
+
+.TextMessangeCopy {
+  position: fixed;
+  top: 2%;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #800080;
+  padding: 10px ;
+  border-radius: 10px;
+  font-family: 'Roboto', sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  color: white;
+  border: none;
+}
+
+.TextMessangeSaze {
+  position: fixed;
+  top: 2%;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #800080;
+  padding: 10px ;
+  border-radius: 10px;
+  font-family: 'Roboto', sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  color: white;
+  border: none;
+}
+
+.errorNotification {
+  position: fixed;
+  top: 2%;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #800080;
+  padding: 10px ;
+  border-radius: 10px;
+  font-family: 'Roboto', sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  color: white;
+  border: none;
+}
+
+.downloadmain {
+  position: absolute;
+  width: 100%;
+  height: 50%;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(255, 0, 0, 0);
+}
+
+.downloadmain .cell {
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: rgba(0, 0, 255, 0);
+}
+
+.downloadmain .cell .name {
+  position: fixed;
+  left: 28%;
+  font-size: 22px; 
+}
+
+.downloadmain .cell .gb {
+  position: fixed;
+  left: 28%;
+  top: 20%;
+  font-size: 15px;
+}
+
+.downloadmain .cell .img img {
+  width: 64px;
+  height: auto;
+}
+
+.downloadbutton {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 0px;
+  background-color: rgba(0, 0, 255, 0);
+  width: auto;
+  height: auto;
+}
+
+.downloadbutton button {
+  width: 120px;
+  height: 35px;
+  font-size: 16px;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 500;
+  background-color: #800080;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.downloadbutton button:hover {
+  background-color: #4e014e;
+}
+
+.downloaduploudfile {
+  position: fixed;
+  width: 500px;
+  height: 300px;
+  background-color: rgb(219, 219, 219);
+  left: 50%;
+  top: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  border-radius: 10px;
+  /* display: flex;
+  align-items: center;
+  justify-content: center; */
+  cursor: pointer;
+  border: 2px solid #000000;
+}

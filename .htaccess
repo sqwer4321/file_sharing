@@ -1,0 +1,2 @@
+RewriteEngine On
+RewriteRule ^([a-zA-Z0-9-]+)/?$ download.php?link=$1 [L,QSA]

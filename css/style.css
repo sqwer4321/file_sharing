@@ -1,0 +1,94 @@
+
+
+
+.uploudfile {
+    position: fixed;
+    width: 700px;
+    height: 500px;
+    background-color: rgb(219, 219, 219);
+    left: 50%;
+    top: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    border-radius: 10px;
+    /* display: flex;
+    align-items: center;
+    justify-content: center; */
+    cursor: pointer;
+    border: 2px solid #000000;
+}
+
+.ani {
+  width: 30px;
+  border-radius: 50%;
+  position: absolute;
+  /* transition: all 1s ease; */
+  left: 50%;
+  top: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  transition: left 0.5s ease; /* Убедитесь, что анимация плавная */
+  cursor: pointer; /* Курсор в виде указателя */
+}
+
+/* .uploudfile:hover {
+    background-color: rgb(202, 202, 202);
+} */
+
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow: hidden;
+    background-color: #232323; /* Dark background similar to the image */
+  }
+  
+  #grid-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(40px, 1fr)); /* Creates a grid layout */
+  }
+  
+  .grid-square {
+    width: 40px;
+    height: 40px;
+    background-color: #232323; /* Same as the body to make grid squares visible */
+    box-shadow: inset 0 0 0 1px #2d2d2d; /* Slight shadow to see the squares */
+    transition: background-color 2s ease-out; /* Transition for the fade effect */
+  }
+
+  .loading {
+    display: none;
+    position: fixed;
+    width: 350px;
+    height: 500px;
+    right: 0px;
+    top: 50%;
+    transform: translateY(-50%);
+    border-radius: 0px 10px 10px 0px;
+    background-color: rgba(255, 255, 255, 0);
+}
+
+.loading iframe {
+    align-items: center;
+    position: fixed;
+    overflow: none;
+    width: 100%;
+    height: 40px;
+    left: 50%;
+    top: 50%;
+    transform: translateX(-50%) translateY(-50%);
+}
+
+.auth_alert {
+  padding: 10px 15px;
+  border-radius: 5px;
+  font-size: 14px;
+  max-width: 100%;
+}
+
+
+.auth_alert_4 {
+  background: rgba(255,0,0,.2);
+  color: #ff5c5c;
+}
